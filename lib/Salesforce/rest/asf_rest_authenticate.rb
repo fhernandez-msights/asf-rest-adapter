@@ -75,10 +75,10 @@ module Authenticate
             login_svr = asf_rest_config["asf-rest-config"]["url"].to_s
             api_version = asf_rest_config["asf-rest-config"]["api_version"].to_s
 
-            puts "Salesforce url: " + asf_rest_config["asf-rest-config"]["url"].to_s
+            puts "Salesforce url: " + login_svr
             puts "Username: " + username
             puts "Password: " + password
-            puts "API Version " + login_svr
+            puts "API Version: " + api_version
 
             security_token, rest_svr, rest_version = Salesforce::Rest::AsfRest.bootup_rest_adapter(username, password, api_version, login_svr)
             
